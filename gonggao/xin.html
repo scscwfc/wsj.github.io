@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo</title>
+  <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
+  <link href="//unpkg.com/layui@2.11.6/dist/css/layui.css" rel="stylesheet">
+</head>
+<body>
+<!-- 给容器追加 class="layui-form-pane"，即可显示为方框风格 -->
+<form class="layui-form layui-form-pane" action="">
+  <div class="layui-form-item">
+    <label class="layui-form-label">标题</label>
+    <div class="layui-input-block">
+      <input type="text" name="title" autocomplete="off" placeholder="请输入" lay-verify="required" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">日期选择</label>
+      <div class="layui-input-block">
+        <input type="text" name="date" id="date1" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label">发文单位</label>
+      <div class="layui-input-inline">
+        <input type="text" name="didian" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">地点</label>
+    <div class="layui-input-inline">
+      <input type="password" name="position" placeholder="请输入" lay-verify="required" autocomplete="off" class="layui-input">
+    </div>
+    <div class="layui-form-mid layui-text-em">请务必填写地点</div>
+  </div>
+  
+  <div class="layui-form-item">
+    <label class="layui-form-label">类型</label>
+    <div class="layui-input-inline">
+      <select name="interest" lay-filter="aihao">
+        <option value=""></option>
+        <option value="0">科普</option>
+        <option value="1" selected>疫苗</option>
+        <option value="2">接种点</option>
+        
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item" pane>
+    <label class="layui-form-label">提交设置</label>
+    <div class="layui-input-block">
+      <input type="checkbox" checked name="open" lay-skin="switch" lay-filter="switchTest" title="开关">
+    </div>
+  </div>
+  <div class="layui-form-item" pane>
+    <label class="layui-form-label">目标群体</label>
+    <div class="layui-input-block">
+      <input type="radio" name="people" value="全体业主" title="全体员工" checked>
+      <input type="radio" name="people" value="全体业主" title="全体业主">
+      <input type="radio" name="people" value="广大市民" title="广大市民" >
+    </div>
+  </div>
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">内容</label>
+    <div class="layui-input-block">
+      <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <button class="layui-btn" lay-submit lay-filter="demo2">确认</button>
+    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+  </div>
+</form>
+  
+<!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+<script src="//unpkg.com/layui@2.11.6/dist/layui.js"></script> 
+<script>
+layui.use(['form'], function(){
+  var form = layui.form;
+  var layer = layui.layer;
+  // 提交事件
+  form.on('submit(demo2)', function(data){
+    var field = data.field; // 获取表单字段值
+    // 显示填写结果，仅作演示用
+    layer.alert(JSON.stringify(field), {
+      title: '当前填写的字段值'
+    });
+    // 此处可执行 Ajax 等操作
+    // …
+    return false; // 阻止默认 form 跳转
+  });
+});
+</script>
+
+</body>
+</html>
