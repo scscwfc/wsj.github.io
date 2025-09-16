@@ -1,0 +1,71 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [{
+    "name":"张三",
+    "age":"34",
+    "phone":"23453987658",
+    "email":"stu@edn.com",
+    "sex":"女",
+    "date":"2024-09-01"
+  },
+  {
+    "name":"赵四",
+    "age":"22",
+    "phone":"12378987658",
+    "email":"stu@edn.com",
+    "sex":"男",
+    "date":"2024-09-01"
+  },
+  {
+    "name":"王五",
+    "age":"33",
+    "phone":"15678987658",
+    "email":"stu@edn.com",
+    "sex":"女",
+    "date":"2024-09-01"
+  },
+  {
+    "name":"张三",
+    "age":"11",
+    "phone":"15678987658",
+    "email":"stu@edn.com",
+    "sex":"男",
+    "date":"2024-09-01"
+  },
+  {
+    "name":"赵四",
+    "age":"14",
+    "phone":"15678987658",
+    "email":"stu@edn.com",
+    "sex":"男",
+    "date":"2024-09-01"
+  },
+  {
+    "name":"王五",
+    "age":"14",
+    "phone":"15678987658",
+    "email":"stu@edn.com",
+    "sex":"男",
+    "date":"2024-09-01"
+  },
+  {
+    "name":"张三",
+    "age":"24",
+    "phone":"15678987658",
+    "email":"stu@edn.com",
+    "sex":"男",
+    "date":"2024-09-01"
+  },
+  {
+    "name":"张三",
+    "age":"44",
+    "phone":"15678987658",
+    "email":"stu@edn.com",
+    "sex":"男",
+    "date":"2024-09-01"
+  }
+
+]
+}
