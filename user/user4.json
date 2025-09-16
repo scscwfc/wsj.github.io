@@ -1,0 +1,119 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "name": "新冠病毒疫苗",
+      "jitype": "鼻喷剂",
+      "size": "mg/剂",
+      "type": "灭活疫苗",
+      "found": "肌肉注射",
+      "register": "119198329384",
+      "time-data": "2023-10-20",
+      "count": "9999",
+      "position": "山西",
+      "status": "启用"
+    },
+    {
+      "name": "乙肝疫苗",
+      "jitype": "注射剂",
+      "size": "μg/剂",
+      "type": "重组疫苗",
+      "found": "肌肉注射",
+      "register": "129198329384",
+      "time-data": "2020-10-20",
+      "count": "2030",
+      "position": "青岛",
+      "status": "启用"
+    },{
+      "name": "流感疫苗",
+      "jitype": "注射剂",
+      "size": "0.5ml/剂",
+      "type": "裂解疫苗",
+      "found": "肌肉注射",
+      "register": "129198329384",
+      "time-data": "2011-1-20",
+      "count": "828",
+      "position": "北京",
+      "status": "启用"
+    },{
+      "name": "狂犬病疫苗",
+      "jitype": "注射剂",
+      "size": "0.5ml/剂",
+      "type": "细胞培养疫苗",
+      "found": "肌肉注射",
+      "register": "129198329384",
+      "time-data": "2020-10-20",
+      "count": "2323+",
+      "position": "天津",
+      "status": "启用"
+    },{
+      "name": "肺炎链球菌疫苗",
+      "jitype": "注射剂",
+      "size": "0.5ml/剂",
+      "type": "多糖结合疫苗",
+      "found": "肌肉注射",
+      "register":"29348284098",
+      "time-data": "2027-10-20",
+      "count": "8978",
+      "position": "南京",
+      "status": "启用"
+    },{
+      "name": "水痘疫苗",
+      "jitype": "注射剂",
+      "size": "0.5ml/剂",
+      "type": "减毒活疫苗",
+      "found": "皮下注射",
+      "register": "309198329384",
+      "time-data": "1999-10-20",
+      "count": "897",
+      "position": "陕西",
+      "status": "启用"
+    },{
+      "name": "脊髓灰质炎疫苗",
+      "jitype": "滴剂",
+      "size": "mg/剂",
+      "type": "减毒活疫苗",
+      "found": "口服",
+      "register": "129198329384",
+      "time-data": "2020-10-20",
+      "count": "283",
+      "position": "上海",
+      "status": "启用"
+    },{
+      "name": "甲肝疫苗",
+      "jitype": "注射剂",
+      "size": "mg/剂",
+      "type": "灭活疫苗",
+      "found": "肌肉注射",
+      "register": "129198329384",
+      "time-data": "2020-10-20",
+      "count": "1020",
+      "position": "台湾",
+      "status": "启用"
+    },{
+      "name": "HPV疫苗",
+      "jitype": "注射剂",
+      "size": "mg/剂",
+      "type": "重组疫苗",
+      "found": "肌肉注射",
+      "register": "129198329384",
+      "time-data": "2020-10-20",
+      "count": "2331",
+      "position": "西藏",
+      "status": "启用"
+    },{
+      "name": "百白破疫苗",
+      "jitype": "注射剂",
+      "size": "mg/剂",
+      "type": "联合疫苗",
+      "found": "肌肉注射",
+      "register": "129198329384",
+      "time-data": "2020-10-20",
+      "count": "2321",
+      "position": "内蒙古",
+      "status": "启用"
+    }
+  ]
+}

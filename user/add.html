@@ -1,0 +1,155 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css">
+		<style>
+			.required::before {
+				/* 星号内容 */
+				content: "*";
+					/* 红色 */
+				color: #ff0000;
+				/* 与文字保持一点距离 */
+				margin-right: 4px;
+			/* 星号加粗 */
+				font-weight: bold;				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<label class="layui-form-label required">疫苗名称</label>
+				<div class="layui-input-block">
+				<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+					lay-reqtext="用户名不能为空!" placeholder="请输入用户名">
+					</div>
+			</div>
+			
+			<div class="layui-form-item">
+				<label class="layui-form-label required">商品名</label>
+				<div class="layui-input-block">
+				   <input id="userpsw" type="text" name="userpsw" class="layui-input" lay-verify="required"
+					lay-reqtext="密码不能为空!">
+				</div>
+			</div>
+			
+			<div class="layui-form-item">
+				<label class="layui-form-label">生产企业名称</label>
+				<div class="layui-input-block">
+				   <input id="address" type="text" name="address" class="layui-input">
+				</div>
+			</div>
+			
+			<div class="layui-form-item">
+				<label class="layui-form-label required">剂型</label>
+				<div class="layui-input-block">
+					<select lay-verify="required">
+						<option value="1">注射剂</option>
+						<option value="2">口服剂</option>
+						<option value="3">鼻喷剂</option>
+					</select>
+				</div>
+			</div><!-- 院系下拉选择结束-->
+			<div class="layui-form-item">
+				<label class="layui-form-label required">规格</label>
+				<div class="layui-input-block">
+					<input type="radio" name="sex" value="男" title="μg/剂" checked="">
+					<input type="radio" name="sex" value="女" title="mg/剂">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label required">类型</label>
+				<div class="layui-input-block">
+					<select lay-verify="required">
+						<option value="1">灭活疫苗</option>
+						<option value="2">减毒活疫苗</option>
+						<option value="3">重组蛋白疫苗（如亚单位疫苗）</option>
+                        <option value="3">病毒载体疫苗</option>
+                        <option value="3">mRNA疫苗</option>
+					</select>
+				</div>
+			</div><!-- 院系下拉选择结束-->
+			<div class="layui-form-item">
+				<label class="layui-form-label">接种途径</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="course" lay-skin="tag" title="肌肉注射" checked>
+					<input type="checkbox" name="course" lay-skin="tag" title="皮下注射">
+					<input type="checkbox" name="course" lay-skin="tag" title="皮内注射">
+                    <input type="checkbox" name="course" lay-skin="tag" title="口服">
+					<input type="checkbox" name="course" lay-skin="tag" title="鼻喷">
+				</div>
+			</div>
+			<div class="layui-form-item">
+			   <label class="layui-form-label">状态</label>
+			   <div class="layui-input-block">
+			       <input type="checkbox" name="status" lay-skin="switch" lay-filter="switchTest" lay-text="启用|禁用">
+			   </div>
+			</div>
+            <div class="layui-form-item">
+				<label class="layui-form-label required">药品批准文号/注册证号</label>
+				<div class="layui-input-block">
+				   <input id="address" type="text" name="address" class="layui-input">
+				</div>
+			</div>
+            <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">生产日期</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" id="birthday" placeholder="yyyy-MM-dd">
+      </div>
+    </div>
+    </div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">备注</label>
+				<div class="layui-input-block">
+					<textarea   name="remark" class="layui-textarea" placeholder="请输入备注信息"></textarea>
+				</div>
+			</div> <!-- 文本域结束 -->
+			<!-- 提交按钮 -->
+			<div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认保存</button>
+        </div>
+    </div>
+		</div>	
+		<script src="../lib/layui-v2.6.3/layui.js"></script>
+        
+<script>
+  layui.use(function(){
+	  // 获取laydate
+    var laydate = layui.laydate;
+    // 渲染
+    laydate.render({
+      elem: '#birthday' // 出生日期文本框的id
+    });
+    // 正文显示
+    laydate.render({
+      elem: '#createDate', // 创建日期文本框的id
+      lang: 'cn' // 日历显示语言为中文
+    });
+	// 年月
+	laydate.render({
+	    elem: '#ID-laydate-type-month',
+	    type: 'month'
+	  });
+	  
+  });
+  form.on('submit(demo1)', function(data){
+    var field = data.field; // 获取表单字段值
+    // 显示填写结果，仅作演示用
+    layer.alert(JSON.stringify(field), {
+      title: '当前填写的字段值'
+    });
+    // 此处可执行 Ajax 等操作
+    // …
+    return false; // 阻止默认 form 跳转
+  });
+  
+ 
+</script>	 
+	</body>
+</html>
+
+
