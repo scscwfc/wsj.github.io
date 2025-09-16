@@ -1,0 +1,69 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "username":"10086",
+      "name":"张三",
+      "phone": "1238789098",
+      "password": "qwdwijdnuec",
+      "status": "启用"
+    },
+    {
+      "username":"10087",
+      "name":"赵四",
+      "phone": "1348789098",
+      "password": "eefijdnuec",
+      "status": "启用"
+    },{
+      "username":"10088",
+      "name":"王五",
+      "phone": "3428789098",
+      "password": "wrwefeijdnuec",
+      "status": "启用"
+    },{
+      "username":"10089",
+      "name":"张三",
+      "phone": "5558789098",
+      "password": "fasfijdnuec",
+      "status": "启用"
+    },{
+      "username":"10090",
+      "name":"赵四",
+      "phone": "1238789098",
+      "password": "fsefijdnuec",
+      "status": "启用"
+    },{
+      "username":"10091",
+      "name":"王五",
+      "phone": "1238789098",
+      "password": "dfsijdnuec",
+      "status": "启用"
+    },{
+      "username":"10092",
+      "name":"张三",
+      "phone": "1238789098",
+      "password": "sfefsec",
+      "status": "启用"
+    },{
+      "username":"10093",
+      "name":"赵四",
+      "phone": "1238789098",
+      "password": "13edijdnuec",
+      "status": "启用"
+    },{
+      "username":"10094",
+      "name":"王五",
+      "phone": "1238789098",
+      "password": "233ijdnuec",
+      "status": "启用"
+    },{
+      "username":"10095",
+      "name":"张三",
+      "phone": "1238789098",
+      "password": "afwfijdnuec",
+      "status": "启用"
+    }
+  ]
+}
