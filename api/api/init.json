@@ -1,0 +1,174 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/home.html"
+  },
+  "logoInfo": {
+    "title": "疫苗接种",
+    "image": "images/nuc.jpeg",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "首页",
+          "href": "page/home.html",
+          "icon": "fa fa-home",
+          "target": "_self"
+        },
+        {
+          "title": "疫苗与库存管理",
+          "href": "",
+          "icon": "fa fa-group",
+          "target": "_self",
+          "child": [
+          {
+            "title": "新增疫苗种类",
+            "href": "user/add1.html",
+            "icon": "fa fa-plus-square-o",
+            "target": "_self"
+          }, {
+            "title": "停用疫苗品类",
+            "href": "user/stop.html",
+            "icon": "fa fa-search",
+            "target": "_self"
+          },
+          {
+            "title": "疫苗目录查询",
+            "href": "user/muluchaxun.html",
+            "icon": "fa fa-search",
+            "target": "_self"
+          },
+          {
+            "title": "库存明细查询",
+            "href": "user/cha.html",
+            "icon": "fa fa-search",
+            "target": "_self"
+          }
+        ]
+        },
+        {
+          "title": "接种点与号源管理",
+          "href": "",
+          "icon": "fa fa-institution",
+          "target": "_self",
+          "child": [
+            {
+              "title": "新增接种点",
+              "href": "point/addb.html",
+              "icon": "fa fa-plus-square-o",
+              "target": "_self"
+            }, {
+              "title": "接种点列表查询",
+              "href": "point/chad.html",
+              "icon": "fa fa-plus-circle",
+              "target": "_self"
+            }, {
+              "title": "删除，修改号源",
+              "href": "point/stopf.html",
+              "icon": "fa fa-search",
+              "target": "_self"
+            },
+            {
+              "title": "新增号源",
+              "href": "point/addc.html",
+              "icon": "fa fa-search",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "用户与权限管理",
+          "href": "",
+          "icon": "fa fa-male",
+          "target": "_self",
+          "child": [
+            {
+              "title": "新增用户账号",
+              "href": "userpeople/adde.html",
+              "icon": "fa fa-plus-circle",
+              "target": "_self"
+            }, {
+              "title": "用户列表查询",
+              "href": "userpeople/select.html",
+              "icon": "fa fa-search-plus",
+              "target": "_self"
+            }, {
+              "title": "人数统计",
+              "href": "userpeople/show.html",
+              "icon": "fa fa-bar-chart",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "接种记录管理",
+          "href": "",
+          "icon": "fa fa-trophy",
+          "target": "_self",
+          "child": [
+            {
+              "title": "登记接种记录",
+              "href": "record/dengji.html",
+              "icon": "fa fa-plus-square-o",
+              "target": "_self"
+            }, {
+              "title": "接种记录查询",
+              "href": "record/chaxun.html",
+              "icon": "fa fa-search",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "公告与内容管理",
+          "href": "",
+          "icon": "fa fa-paw",
+          "target": "_self",
+          "child": [
+            {
+              "title": "发布新公告",
+              "href": "gonggao/xin.html",
+              "icon": "fa fa-plus-circle",
+              "target": "_self"
+            }, {
+              "title": "内容列表查询",
+              "href": "gonggao/xun.html",
+              "icon": "fa fa-search-plus",
+              "target": "_self"
+            }, {
+              "title": "公告统计",
+              "href": "gonggao/tonhji.html",
+              "icon": "fa fa-bar-chart",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "接种者档案管理",
+          "href": "",
+          "icon": "fa fa-eye",
+          "target": "_self",
+          "child": [
+            {
+              "title": "新增接种者",
+              "href": "dangan/adda.html",
+              "icon": "fa fa-plus-square-o",
+              "target": "_self"
+            }, {
+              "title": "搜索与筛选功能",
+              "href": "dangan/chaa.html",
+              "icon": "fa fa-search",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
