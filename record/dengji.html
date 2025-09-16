@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo</title>
+  <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
+  <link href="//unpkg.com/layui@2.11.6/dist/css/layui.css" rel="stylesheet">
+</head>
+<body>
+<form class="layui-form" action="">
+  <div class="layui-form-item">
+    <label class="layui-form-label">姓名</label>
+    <div class="layui-input-block">
+      <input type="text" name="name" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">生产企业</label>
+      <div class="layui-input-inline layui-input-wrap">
+        <input type="tel" name="company" lay-verify="required" autocomplete="off" lay-reqtext="请填写生产企业" lay-affix="clear" class="layui-input demo-phone">
+      </div>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">身份证号</label>
+    <div class="layui-input-inline layui-input-wrap">
+      <input type="text" name="identify" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">联系电话</label>
+      <div class="layui-input-inline">
+        <input type="text" name="phone" lay-verify="required|phone" placeholder="有值时才校验" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label">接种日期</label>
+      <div class="layui-input-inline layui-input-wrap">
+        <div class="layui-input-prefix">
+          <i class="layui-icon layui-icon-date"></i>
+        </div>
+        <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">接种剂次</label>
+    <div class="layui-input-block">
+      <select name="interest" lay-filter="aihao">
+        <option value=""></option>
+        <option value="0">第1剂</option>
+        <option value="1" selected>第2剂</option>
+        <option value="2">第3剂（加强剂）</option> 
+        <option value="2">第4剂（第二次加强剂）</option> 
+      </select>
+    </div>
+  </div>  
+  <div class="layui-form-item">
+				<label class="layui-form-label required">性别</label>
+				<div class="layui-input-block">
+					<input type="radio" name="sex" value="男" title="男" checked="">
+					<input type="radio" name="sex" value="女" title="女">
+				</div>
+			</div>
+    <div class="layui-form-item">
+				<label class="layui-form-label required">疫苗类型</label>
+				<div class="layui-input-block">
+					<select name="interest" lay-filter="aihao">
+						<option value="1">灭活疫苗</option>
+						<option value="2">减毒活疫苗</option>
+						<option value="3">重组蛋白疫苗（如亚单位疫苗）</option>
+                        <option value="3">病毒载体疫苗</option>
+                        <option value="3">mRNA疫苗</option>
+					</select>
+				</div>
+			</div>   
+  <div class="layui-form-item">
+    <label class="layui-form-label">接种途径</label>
+    <div class="layui-input-block">
+    <input type="checkbox" name="arr[0]" lay-skin="tag" title="肌肉注射" checked>
+	<input type="checkbox" name="arr[1]" lay-skin="tag" title="皮下注射">
+	<input type="checkbox" name="arr[2]" lay-skin="tag" title="皮内注射">
+    <input type="checkbox" name="arr[3]" lay-skin="tag" title="口服">
+	<input type="checkbox" name="arr[4]" lay-skin="tag" title="鼻喷">
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">状态</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="open" lay-skin="switch" lay-filter="switchTest" title="好|差">
+    </div>
+  </div>
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">备注</label>
+    <div class="layui-input-block">
+      <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button type="submit" class="layui-btn" lay-submit lay-filter="demo1">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+  
+<!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+<script src="//unpkg.com/layui@2.11.6/dist/layui.js"></script> 
+<script>
+layui.use(['form', 'laydate', 'util'], function(){
+  var form = layui.form;
+  var layer = layui.layer;
+  var laydate = layui.laydate;
+  var util = layui.util;
+  
+  // 指定开关事件
+  form.on('switch(switchTest)', function(data){
+    layer.msg('开关 checked：'+ (this.checked ? 'true' : 'false'), {
+      offset: '6px'
+    });
+    layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是 好|差', data.othis)
+  });
+  
+  // 提交事件
+  form.on('submit(demo1)', function(data){
+    var field = data.field; // 获取表单字段值
+    // 显示填写结果，仅作演示用
+    layer.alert(JSON.stringify(field), {
+      title: '当前填写的字段值'
+    });
+    // 此处可执行 Ajax 等操作
+    // …
+    return false; // 阻止默认 form 跳转
+  });
+  
+  // 日期
+  laydate.render({
+    elem: '#date'
+  });
+  
+
+});
+</script>
+
+</body>
+</html>
